@@ -26,7 +26,7 @@ Chikn Farmland is a new-ish way to farm FEED, currently only available in the Ch
 
 ## How to use this
 * `npm install`
-* Add your wallet address & private key to config.json
+* Copy sample-config.json to config.json, and add your wallet address & private key to config.json. This file will not *and should not* be added to the git repository. If anyone gains access to this file with your private key they can drain your wallet.
 * `npm run <project> -- <options>` without any options, the script will only claim the "egg" token
 
 For example, to claim & stake VMTycoon Businesses, run:
