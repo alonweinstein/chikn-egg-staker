@@ -14,13 +14,13 @@ const AntAutomator = require('./projects/avalant/AntAutomator.js');
 const program = new Command();
 program.version('0.0.1');
 
-const projectOption = new Option('-p, --project <project-name>', 'project name').choices(['chikn', 'vmtycoon', 'minerjoe', 'chikn-farmland', 'avalant']);
+const projectOption = new Option('-p, --project <project-name>', 'project name').choices(['chikn', 'vmtycoon', 'minerjoe', 'farmland', 'avalant']);
 projectOption.makeOptionMandatory(true);
 
 program
     .requiredOption('-c, --configFile <config file>', 'Path to config file with addresses & keys', 'config.json')
     .addOption(projectOption)
-    .option('--claim-egg', 'claim "Egg" token', false)
+    .option('--claim-egg', 'claim "Egg" token', true)
     .option('--claim-feed', 'claim "Feed"" token. If you\'re staking the "Egg" token this happens automatically.', false)
     .option('--stake-egg', 'Stake "Egg" token', false);
 

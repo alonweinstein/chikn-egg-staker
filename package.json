@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run" : "node index.js"
+    "auto" : "node index.js",
+    "chikn": "node index.js -p chikn",
+    "vmtycoon": "node index.js -p vmtycoon",
+    "minerjoe": "node index.js -p minerjoe",
+    "avalant": "node index.js -p avalant",
+    "farmland": "node index.js -p farmland"
   },
   "author": "",
   "license": "ISC",
