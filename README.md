@@ -27,12 +27,31 @@ Chikn Farmland is a new-ish way to farm FEED, currently only available in the Ch
 ## How to use this
 * `npm install`
 * Add your wallet address & private key to config.json
-* npm run -p <project> <commands>
+* `npm run <project> -- <options>` without any options, the script will only claim the "egg" token
 
 For example, to claim & stake VMTycoon Businesses, run:
-`npm run -p vmtycoon --claim-egg --stake-egg` 
+`npm run vmtycoon -- --claim-egg --stake-egg` 
 
-* `npm run -h` to see all the different projects & commands
+To claim eggs from chikn, run:
+`npm run chikn`
+
+To only claim Credits from Minerjoe, run:
+`npm run minerjoe -- --claim-feed`
+
+To claim feed from your farmland if it's full, run:
+`npm run farmland`
+
+You can also set the project yourself with the "auto" script:
+`npm run auto -- -p <project> <options>`
+
+Or you can just run the script directly from node:
+`node index.js -p <project> <options>`
+
+To see all the available options:
+`npm run auto -- -h`
+or 
+`node index.js -h`
+
 * Use cron to run it on schedule. If you use multiple projects make sure to add a few minutes buffer between each project to avoid transactions trying to run at the same time.
 
 ## TODO
