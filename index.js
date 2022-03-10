@@ -40,6 +40,8 @@ async function go (config, options) {
     const provider = getProvider(NETWORKS['avalanche']);
     const wallet = new ethers.Wallet(config.privateKey, provider);
 
+    // console.log(options);
+
     if (options.project=='farmland') {
         const farmAuto = new FarmAutomator(config.address, wallet, config.name);
         const pending = await farmAuto.checkPending();
@@ -74,8 +76,8 @@ async function go (config, options) {
         }
 
         if (options.stakeEgg) {
-            const {stakeEggReceipt : receipt, stakedEggTokens : tokens} = await auto.stake();
-            log(config, `Staked ${stakedEggTokens} ${auto.eggTokenName()}`);
+            const {receipt} = await auto.stake();
+            log(config, `Staked ${auto.eggTokenName()}`);
         } else if (options.claimFeed) {
             await auto.claimFeed();
             log(config, `Claimed ${auto.feedTokenName()}`);

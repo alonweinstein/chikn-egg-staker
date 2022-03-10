@@ -2,5 +2,6 @@
     "address" : "your-address",
     "privateKey" : "your-privatekey",
     "name" : "my-config-name",
-    "webhookUrl": "optional: slack webhook URL for notifications; delete this key if not needed"
+    "webhookUrl": "optional: slack webhook URL for notifications; delete this key if not needed",
+    "dev" : true
 }

@@ -85,7 +85,7 @@ module.exports = class TritokenAutomator {
 
                 const stakeTx = await feedContract[this.stakeEggMethodName](eggBalance);
                 const receipt = await stakeTx.wait();
-                return {receipt, tokens : ethers.utils.formatUnits(eggBalance)};
+                return {receipt};
             } else {
                 console.log(`No tokens available for ${this.name}`);
                 return false;
